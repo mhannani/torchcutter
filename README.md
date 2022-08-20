@@ -7,49 +7,57 @@ Project Organization
 ------------
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
+    ├── Makefile               <- Makefile with commands like `make data`, `make train` or 'make deploy', ... etc
+    ├── README.md              <- The top-level README for developers using this project.
     ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
+    │   ├── external           <- Data from third party sources.
+    │   ├── interim            <- Intermediate data that has been transformed.
+    │   ├── processed          <- The final, canonical data sets for modeling.
+    │   └── raw                <- The original, immutable data dump.
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+    ├── docs                   <- torchcutter documentation
     │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
+    ├── output                 <- Trained and serialized models, model predictions, or model summaries
+    │   └── figures            <- Generated model evaluation figures 
+    │   └── models             <- Saves checkpoints
     │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    ├── notebooks              <- Jupyter notebooks. Naming convention is a number (for ordering),
+    │                             the creator's initials, and a short `-` delimited description, e.g.
+    │                            `1.0-jqp-initial-data-exploration`.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+    ├── references             <- Data dictionaries, manuals, and all other explanatory materials.
     │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
+    ├── reports                <- Generated analysis as HTML, PDF, LaTeX, etc.
+    │   └── figures            <- Generated graphics and figures to be used in reporting
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
+    ├── requirements.txt       <- The requirements file for reproducing the analysis environment, e.g.
+    │                             generated with `pip freeze > requirements.txt`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+    ├── setup.py               <- makes project pip installable (pip install -e .) so src can be imported
+    ├── src                    <- Source code for use in this project.
+    │   ├── __init__.py        <- Makes src a Python module
     │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
+    │   ├── data               <- data helpers; classes and functions
+    │   │   └── dataset.py     <- Custom PyTorch dataset
+    │   │   └── get_data.py    <- Get data wrapped into dataloader ready to be used to train model
     │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
+    │   ├── models             <- Model architecture to train
+    │   │   └── model.py       <- Model architecture in PyTorch
     │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
+    │   ├── tester             <- Testing and make inference using the pretrained checkpoints
+    │   │   ├── base.py        <- Abstract class for testing model
+    │   │   └── tester.py      <- Class implementing routines to make inference with a checkpoint
     │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
+    │   ├── trainer            <- Testing and make inference using the pretrained checkpoints
+    │   │   ├── base.py        <- Abstract class for training model
+    │   │   └── tester.py      <- Class implementing routines to train the model
+    │   │
+    │   ├── utils              <- utility classes and function
+    │   │   ├─── io            <- Module for input/output operations
+    │   │   │    ├───  read.py <- Read from disk functions utility, like Read configuration file, ... etc
+    │   │   │    ├───  write.py <- write to disk functions utility, liek write to csv file, ... etc
     │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    └── tox.ini                <- tox file with settings for running tox; see tox.readthedocs.io
 
 
 --------
