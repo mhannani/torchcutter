@@ -1,7 +1,7 @@
-torchcutter
+Torchcutter
 ==============================
 
-A logical, reasonably standardized, but flexible project structure for training, evaluating, and deploying PyTorch models.
+A logical, reasonably standardized, but flexible framework for training, evaluating, and deploying PyTorch models.
 
 Project Organization
 ------------
