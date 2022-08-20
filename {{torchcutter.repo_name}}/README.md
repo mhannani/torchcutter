@@ -1,14 +1,9 @@
-# Welcome to torchcutter
+Torchcutter
+==============================
 
-## Installation
+A logical, reasonably standardized, but flexible framework for training, evaluating, and deploying PyTorch models.
 
-* `pip install torchcutter` - Install torchcutter.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
+Project Organization
 ------------
 
     ├── LICENSE
@@ -65,3 +60,4 @@
     └── tox.ini                <- tox file with settings for running tox; see tox.readthedocs.io
 
 
+--------
