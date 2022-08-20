@@ -51,7 +51,7 @@ coverage.xml
 *.log
 
 # Sphinx documentation
-{{torchcutter.repo_name}}/docs/_build/
+docs/_build/
 
 # PyBuilder
 target/
@@ -76,7 +76,7 @@ target/
 .ipynb_checkpoints/
 
 # exclude data from source control by default
-/{{torchcutter.repo_name}}/data/
+/data/
 
 # Mac OS-specific storage files
 .DS_Store
