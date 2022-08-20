@@ -1,0 +1,7 @@
+data:
+  root: data
+
+train:
+  batch_size: 16
+  num_epoch: 100
+  device: 'cpu'
