@@ -1,11 +1,34 @@
 # Welcome to torchcutter
 
-## Installation
+## Getting started
+I've created this PyTorch training, evaluation and deployment template for Pytorch enthusiast 
+to better make the aforementioned tasks less cumbersome and focus on system quality.
 
-* `pip install torchcutter` - Install torchcutter.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Requirements
+#### - Python
+Python 3.5+
+
+#### - Cookiecutter
+* [Cookiecutter package] >= 1.4.0 (https://github.com/cookiecutter/cookiecutter)
+
+### Install Cookiecutter
+* Via pip package manager: 
+``` bash
+$ pip install cookiecutter
+```
+
+* Or via conda:
+``` bash
+$ conda config --add channels conda-forge
+$ conda install cookiecutter
+```
+
+## Torchcutter templating
+
+To create a new project using torchcutter template run: 
+``` bash
+$ cookiecutter  https://github.com/mhannani/torchcutter
+```
 
 ## Project layout
 
